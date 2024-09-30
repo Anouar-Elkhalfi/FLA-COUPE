@@ -1,35 +1,77 @@
-body {
-  font-family: Arial, sans-serif;
-  margin: 20px;
+/* Styles personnalisés pour les boutons radio */
+.radio-input {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
-form {
-  max-width: 600px;
-  margin: auto;
-  padding: 10px;
-  border: 1px solid #ccc;
-  background-color: #f9f9f9;
+.radio-input label {
+  margin-right: 15px;
 }
 
-input[type="text"], input[type="range"] {
-  width: 100%;
-  padding: 8px;
-  margin: 10px 0;
+.radio-input input[type="radio"] {
+  accent-color: #435dd8; /* Couleur personnalisée pour les boutons radio */
 }
 
-label {
-  font-weight: bold;
+/* Styles pour le texte à droite des boutons radio */
+.radio-input label {
+  font-size: 1rem;
+  color: #fff;
 }
 
-input[type="submit"] {
-  background-color: #4CAF50;
-  color: white;
-  padding: 10px;
-  border: none;
-  cursor: pointer;
-  width: 100%;
+/* Changement de couleur des boutons sélectionnés */
+.radio-input input[type="radio"]:checked {
+  accent-color: #28a745; /* Couleur verte pour indiquer le choix sélectionné */
+}
+.footer {
+  background-color: #371273;
+  padding: 20px;
+  text-align: center;
+  font-size: 14px;
+  color: #ffffff;
+  margin-top: 40px;
 }
 
-input[type="submit"]:hover {
-  background-color: #45a049;
+.footer p {
+  margin: 0;
+}
+
+
+/* Media queries pour les appareils mobiles et tablettes */
+
+/* Pour les petits téléphones (moins de 576px) */
+@media (max-width: 575px) {
+  body {
+    font-size: 14px;
+  }
+
+  .radio-input {
+    flex-direction: column;
+  }
+
+  .radio-input p {
+    font-size: 14px;
+  }
+}
+
+/* Pour les tablettes (de 576px à 768px) */
+@media (min-width: 576px) and (max-width: 768px) {
+  body {
+    font-size: 16px;
+  }
+
+  .radio-input p {
+    font-size: 15px;
+  }
+}
+
+/* Pour les grands écrans (plus de 768px) */
+@media (min-width: 768px) {
+  body {
+    font-size: 18px;
+  }
+
+  .radio-input p {
+    font-size: 16px;
+  }
 }
