@@ -23,7 +23,7 @@ document.getElementById('feedback-form').addEventListener('submit', function(eve
 
   // Si toutes les validations passent, le formulaire est soumis
   if (formIsValid) {
-      // Le message de remerciement sera affiché après la soumission
+      document.getElementById('feedback-form').submit(); // Soumission du formulaire
       document.getElementById('feedback-form').style.display = 'none';
       document.getElementById('merci-message').style.display = 'block';
   }

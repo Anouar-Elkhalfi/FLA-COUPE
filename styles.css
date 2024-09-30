@@ -23,6 +23,38 @@
 .radio-input input[type="radio"]:checked {
   accent-color: #28a745; /* Couleur verte pour indiquer le choix sélectionné */
 }
+.banner {
+  background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('image/terrain.jpg');
+  background-size: cover;
+  background-position: center;
+  padding: 150px 0;
+  text-align: center;
+}
+
+.banner h1 {
+  color: white;
+  font-size: 45px;
+  margin: 0;
+}
+.banner p {
+  color: white;
+  font-size: 24px;
+}
+
+.button-blue {
+  background-color: #1A48E3;
+  color: white;
+  padding: 16px 48px;
+  border-radius: 4px;
+  display: inline-block;
+  text-decoration: none;
+  transition: .3s;
+}
+
+.button-blue:hover {
+  background-color: #0D1EC6;
+  color: white;
+}
 .footer {
   background-color: #371273;
   padding: 20px;

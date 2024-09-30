@@ -9,15 +9,20 @@
     <link rel="stylesheet" href="styles.css"> <!-- Lien vers ton fichier CSS personnalisé -->
 </head>
 <body class="bg-dark text-light">
-  <div class="banner">
-    <h1>Nous contacter FLA - contact@football-loisir-amateur.fr</h1>
-    <p>Jouez au foot avec plaisir</p>
-    <a href="http://www.football-loisir-amateur.com/Home/Index" class="button-blue">Site FLA</a>
-  </div>
+    <!-- Banner -->
+    <div class="banner">
+        <h1>Nous contacter FLA - contact@football-loisir-amateur.fr</h1>
+        <p>Jouez au foot avec plaisir</p>
+        <a href="http://www.football-loisir-amateur.com/Home/Index" class="button-blue">Site FLA</a>
+    </div>
+
     <div class="container mt-5">
         <h1 class="text-center mb-4">Formulaire Feedback Arbitre</h1>
 
         <form id="feedback-form" action="https://formsubmit.co/anouarelkhalfi@gmail.com" method="POST">
+            <!-- Désactiver Captcha et redirection après soumission -->
+            <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="_next" value="http://www.football-loisir-amateur.com/Home/Index">
 
             <!-- Question 1 -->
             <div class="radio-input mb-4">
