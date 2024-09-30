@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback Arbitre</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Formulaire de Feedback Arbitre</h1>
+    <form id="feedback-form" action="https://formsubmit.co/ton-email@example.com" method="POST">
+        <label for="equipe">Votre équipe :</label>
+        <input type="text" id="equipe" name="equipe" required><br><br>
+
+        <label for="controle-licence">L'arbitre a-t-il vérifié les licences ?</label>
+        <input type="radio" id="licence-oui" name="controle-licence" value="oui" required>
+        <label for="licence-oui">Oui</label>
+        <input type="radio" id="licence-non" name="controle-licence" value="non">
+        <label for="licence-non">Non</label><br><br>
+
+        <label for="protege-tibia">L'arbitre a-t-il vérifié les protège-tibias ?</label>
+        <input type="radio" id="tibia-oui" name="protege-tibia" value="oui" required>
+        <label for="tibia-oui">Oui</label>
+        <input type="radio" id="tibia-non" name="protege-tibia" value="non">
+        <label for="tibia-non">Non</label><br><br>
+
+        <label for="maillots">L'arbitre a-t-il vérifié les maillots ?</label>
+        <input type="radio" id="maillots-oui" name="maillots" value="oui" required>
+        <label for="maillots-oui">Oui</label>
+        <input type="radio" id="maillots-non" name="maillots" value="non">
+        <label for="maillots-non">Non</label><br><br>
+
+        <label for="prestation">Comment évalueriez-vous la prestation générale de l'arbitre ?</label>
+        <input type="range" id="prestation" name="prestation" min="1" max="5" step="1" required>
+        <label for="prestation">De 1 à 5</label><br><br>
+
+        <input type="submit" value="Envoyer">
+    </form>
+    <script src="script.js"></script>
+</body>
+</html>
