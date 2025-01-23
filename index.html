@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formulaire Feedback Arbitre</title>
+    <title>Formulaire Résultats Match</title>
     <!-- Inclusion de Bootstrap et Font Awesome -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="styles.css"> <!-- Lien vers ton fichier CSS personnalisé -->
@@ -11,100 +11,35 @@
 <body class="bg-dark text-light">
     <!-- Banner -->
     <div class="banner">
-        <h1>Nous contacter FLA - contact@football-loisir-amateur.fr</h1>
+        <h1>Contactez-nous FLA - contact@football-loisir-amateur.fr</h1>
         <p>Jouez au foot avec plaisir</p>
         <a href="http://www.football-loisir-amateur.com/Home/Index" class="button-blue">Site FLA</a>
     </div>
 
     <div class="container mt-5">
-        <h1 class="text-center mb-4">Formulaire Feedback Arbitre</h1>
+        <h1 class="text-center mb-4">Formulaire Résultats Match</h1>
 
-        <form id="feedback-form" action="https://formsubmit.co/lolothefirm@gmail.com" method="POST">
+        <form id="match-form" action="https://formsubmit.co/Othmane.roshdi@football-loisir-amateur.fr" method="POST">
             <!-- Désactiver Captcha et redirection après soumission -->
             <input type="hidden" name="_captcha" value="false">
             <input type="hidden" name="_next" value="http://www.football-loisir-amateur.com/Home/Index">
 
-            <!-- Question 1 -->
-            <div class="radio-input mb-4">
-                <p>L'arbitre a-t-il vérifié les licences des joueurs avant le début du match ?</p>
-                <div class="d-flex justify-content-start">
-                    <input type="radio" id="licence-oui" name="controle-licence" value="oui" required>
-                    <label for="licence-oui" class="ms-2">Oui</label>
-                </div>
-                <div class="d-flex justify-content-start">
-                    <input type="radio" id="licence-non" name="controle-licence" value="non">
-                    <label for="licence-non" class="ms-2">Non</label>
-                </div>
-            </div>
-
-            <!-- Question 2 -->
-            <div class="radio-input mb-4">
-                <p>L'arbitre a-t-il vérifié que chaque joueur portait bien des protège-tibias ?</p>
-                <div class="d-flex justify-content-start">
-                    <input type="radio" id="tibia-oui" name="protege-tibia" value="oui" required>
-                    <label for="tibia-oui" class="ms-2">Oui</label>
-                </div>
-                <div class="d-flex justify-content-start">
-                    <input type="radio" id="tibia-non" name="protege-tibia" value="non">
-                    <label for="tibia-non" class="ms-2">Non</label>
-                </div>
-            </div>
-
-            <!-- Question 3 -->
-            <div class="radio-input mb-4">
-                <p>L'arbitre a-t-il contrôlé que les maillots des équipes étaient conformes (numérotation correcte, couleurs distinctes) ?</p>
-                <div class="d-flex justify-content-start">
-                    <input type="radio" id="maillots-oui" name="controle-maillots" value="oui" required>
-                    <label for="maillots-oui" class="ms-2">Oui</label>
-                </div>
-                <div class="d-flex justify-content-start">
-                    <input type="radio" id="maillots-non" name="controle-maillots" value="non">
-                    <label for="maillots-non" class="ms-2">Non</label>
-                </div>
-            </div>
-
-            <!-- Question 4 -->
-            <div class="radio-input mb-4">
-                <p>L'arbitre a-t-il effectué un rappel des règles aux capitaines avant le coup d'envoi ?</p>
-                <div class="d-flex justify-content-start">
-                    <input type="radio" id="rappel-oui" name="rappel-regles" value="oui" required>
-                    <label for="rappel-oui" class="ms-2">Oui</label>
-                </div>
-                <div class="d-flex justify-content-start">
-                    <input type="radio" id="rappel-non" name="rappel-regles" value="non">
-                    <label for="rappel-non" class="ms-2">Non</label>
-                </div>
-            </div>
-
-            <!-- Question 5 (Impartialité) -->
+            <!-- Nom de l'arbitre -->
             <div class="mb-4">
-                <label class="form-label">L'arbitre a-t-il fait preuve d’impartialité envers les deux équipes avant et pendant le match ? (1 à 5)</label>
-                <input type="range" class="form-range" id="impartialite" name="impartialite" min="1" max="5" step="1" required>
+                <label for="referee-name" class="form-label">Nom de l'arbitre</label>
+                <input type="text" class="form-control" id="referee-name" name="referee-name" placeholder="Entrez votre nom" required>
             </div>
 
-            <!-- Question 6 (Présence) -->
-            <div class="radio-input mb-4">
-                <p>L'arbitre était-il présent au moins 30 minutes avant le début du match ?</p>
-                <div class="d-flex justify-content-start">
-                    <input type="radio" id="present-oui" name="presence" value="oui" required>
-                    <label for="present-oui" class="ms-2">Oui</label>
-                </div>
-                <div class="d-flex justify-content-start">
-                    <input type="radio" id="present-non" name="presence" value="non">
-                    <label for="present-non" class="ms-2">Non</label>
-                </div>
-            </div>
-
-            <!-- Heure d'arrivée -->
-            <div id="heure-arrivee" style="display:none;" class="mb-4">
-                <label for="arrivee-heure" class="form-label">Si non, à quelle heure est-il arrivé ?</label>
-                <input type="text" class="form-control" id="arrivee-heure" name="arrivee-heure">
-            </div>
-
-            <!-- Champ équipe -->
+            <!-- Nom du match -->
             <div class="mb-4">
-                <label for="equipe" class="form-label">Veuillez renseigner votre équipe, s'il vous plaît.</label>
-                <input type="text" class="form-control" id="equipe" name="equipe" required>
+                <label for="match-name" class="form-label">Nom du match</label>
+                <input type="text" class="form-control" id="match-name" name="match-name" placeholder="Exemple : Équipe A vs Équipe B" required>
+            </div>
+
+            <!-- Score du match -->
+            <div class="mb-4">
+                <label for="match-score" class="form-label">Score du match</label>
+                <input type="text" class="form-control" id="match-score" name="match-score" placeholder="Exemple : 2-1" required>
             </div>
 
             <button type="submit" class="btn btn-primary w-100">Envoyer</button>
@@ -112,14 +47,14 @@
 
         <!-- Section pour afficher le message de remerciement -->
         <div id="merci-message" style="display:none;" class="mt-4">
-            <h2 class="text-center">Merci pour votre feedback !</h2>
-            <p class="text-center">Votre retour a bien été pris en compte.</p>
+            <h2 class="text-center">Merci pour votre retour !</h2>
+            <p class="text-center">Les résultats ont bien été enregistrés.</p>
         </div>
     </div>
 
     <!-- Footer -->
     <div class="footer mt-5 text-center">
-      <p>Formulaire de feedback arbitre – Créé avec ❤️ par FLA-Arbitre Anouar – Tous droits réservés</p>
+      <p>Formulaire de résultats de match – Créé avec ❤️ par FLA-Arbitre Anouar – Tous droits réservés</p>
     </div>
 
     <!-- Lien vers le fichier JS -->
